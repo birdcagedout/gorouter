@@ -11,7 +11,10 @@ class Dashboard extends StatelessWidget {
       body: Center(
         child: ElevatedButton(
           onPressed: () {
-            context.go('/profile');                   // 방법2
+
+            // 3. child route 사용 시 주의사항
+            // '/' 라우트에서 그 하위 라우트(subroute)로 go하는 경우 ==> 기존 라우트 위에 push 된다.
+            context.go('/profile');
           },
           child: const Text('to Profile'),
         ),

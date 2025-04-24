@@ -4,6 +4,8 @@ import 'package:go_router/go_router.dart';
 import 'profile.dart';
 import 'dashboard.dart';
 
+// YouTube GoRouter 강의
+// https://youtube.com/playlist?list=PLCaS22Sjc8YTQCxP0of90oatXiAei6vTT&si=C1DFU3tlYQK0kswL
 
 void main() {
   runApp(MyApp());
