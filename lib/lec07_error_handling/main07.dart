@@ -21,6 +21,8 @@ void main() {
 
 bool isLoggedIn = false; // 로그인 상태를 나타내는 변수
 
+int count = 0;
+
 class MyApp extends StatelessWidget {
   MyApp({super.key});
 
@@ -36,15 +38,19 @@ class MyApp extends StatelessWidget {
       //   return null;
       // }
 
-      // <시나리오2>
-      // 로그인하지 않은 상태에서 정의되지 않은 route로 이동하려 하면 ==> Error 페이지로 이동
-      print('state.matchedLocation: ${state.matchedLocation}');
-      print('state.fullPath: ${state.fullPath}');
-      print('state.path: ${state.path}');
 
-      // 로그인 여부와 관계없이 '정의되지 않은 route'로 이동하려고 하면 ==> Error 페이지로 이동
+      // 디버그용 값 찍어봄
+      print('현재 ${count++}번째 테스트 중...');
+      print('state.matchedLocation: ${state.matchedLocation}');     // 경로 템플릿에 매칭된 '실제 경로 문자열'
+      print('state.fullPath: ${state.fullPath}');                   // '전체 경로의 템플릿문자열'
+      print('state.path: ${state.path}');                           // 각각의 route 진입 후에서만 '특정 템플릿문자열' 가짐 (전역에서는 null)
+      print('\n');
+      
+
+      // <시나리오2>
+      // (로그인 했든 안했든) '정의되지 않은 route'로 이동하려고 하면 ==> Error 페이지로 이동
       // state.fullPath가 빈 문자열 '' 이면 '정의되지 않은 route'
-      if (state.fullPath!.isEmpty) {
+      if ( (state.fullPath ?? '').isEmpty) {
         return null;
       }
 
