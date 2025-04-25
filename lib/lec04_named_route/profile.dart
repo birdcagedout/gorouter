@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:gorouter/lec04_named_route/route_names.dart';
+
+import 'route_names.dart';
 
 
 class Profile extends StatelessWidget {
@@ -9,8 +10,11 @@ class Profile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // 2-2. state.name을 통해 현재 route의 이름을 확인할 수 있다.
+    final String pathName = GoRouter.of(context).state.name!;   // 'profile'
+
     return Scaffold(
-      appBar: AppBar(title: Text('Profile'),),
+      appBar: AppBar(title: Text(pathName),),
       body: Center(
         child: Column(
           children: [
@@ -20,7 +24,7 @@ class Profile extends StatelessWidget {
             ElevatedButton(
               onPressed: () {
             
-                // 2-2. 이제 route에 이름을 붙여 navigation
+                // 2-1. 이제 route에 이름을 붙여 navigation
                 // context.go('/');
                 context.goNamed(RouteNames.dashboard);
               },

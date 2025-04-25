@@ -1,7 +1,7 @@
 
 // 라우트 "이름" 정의
 class RouteNames {
-  // 잘못된 예시
+  // 잘못된 예시: name과 path를 혼동하지 말자!!
   // static const String dashboard = '/';
   // static const String profile = '/profile';
 
