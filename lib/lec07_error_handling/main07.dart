@@ -43,7 +43,7 @@ class MyApp extends StatelessWidget {
       print('현재 ${count++}번째 테스트 중...');
       print('state.matchedLocation: ${state.matchedLocation}');     // 경로 템플릿에 매칭된 '실제 경로 문자열'
       print('state.fullPath: ${state.fullPath}');                   // '전체 경로의 템플릿문자열'
-      print('state.path: ${state.path}');                           // 각각의 route 진입 후에서만 '특정 템플릿문자열' 가짐 (전역에서는 null)
+      // print('state.path: ${state.path}');                           // 각각의 route 진입 후에서만 '특정 템플릿문자열' 가짐 (전역에서는 null)
       print('\n');
       
 
