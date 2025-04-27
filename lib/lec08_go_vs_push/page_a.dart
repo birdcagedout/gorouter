@@ -32,7 +32,7 @@ class _PageAState extends State<PageA> {
               onPressed: () {
                 context.go('/pageB');
               },
-              child: const Text('PageB(/pageA)로 Go'),
+              child: const Text('PageB(/pageB)로 Go'),
             ),
 
             ElevatedButton(
